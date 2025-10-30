@@ -1,0 +1,33 @@
+/* Use the Poppins font defined in the HTML */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #e2e8f0; 
+  color: #334155;          
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 9999px;    
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.dark .skill-tag {
+    background-color: #1e293b; 
+    color: #cbd5e1;          
+}
+.skill-tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+#mobile-menu.hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+#mobile-menu:not(.hidden) {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}

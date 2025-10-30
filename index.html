@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirri Sasidhar - Personal Portfolio</title>
+    <link rel="icon" type="image/png" href="Imageicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Add dark mode
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+     <body class="bg-gray-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200 transition-colors duration-300">
+
+    <header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-slate-800 dark:text-white"><span class="text-blue-600">Sasidhar</span></a>
+            
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-500 transition">About</a>
+                <a href="#education" class="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-500 transition">Education</a>
+                <a href="#projects" class="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-500 transition">Projects</a>
+                <a href="#skills" class="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-500 transition">Skills</a>
+                <a href="#certifications" class="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-500 transition">Certifications</a>
+                <a href="#contact" class="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-500 transition">Contact</a>
+                
+                <button id="theme-toggle" class="ml-4 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-500">
+                    <i id="theme-toggle-dark-icon" class="fas fa-moon text-2xl hidden"></i>
+                    <i id="theme-toggle-light-icon" class="fas fa-sun text-2xl hidden"></i>
+                </button>
+            </div>
+            
+            <div class="md:hidden flex items-center">
+                 <button id="theme-toggle-mobile" class="mr-4 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-500">
+                    <i id="theme-toggle-dark-icon-mobile" class="fas fa-moon text-2xl hidden"></i>
+                    <i id="theme-toggle-light-icon-mobile" class="fas fa-sun text-2xl hidden"></i>
+                </button>
+                <button id="mobile-menu-button" class="focus:outline-none text-slate-800 dark:text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900">
+            <a href="#about" class="block py-2 px-6 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-slate-800">About</a>
+            <a href="#education" class="block py-2 px-6 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-slate-800">Education</a>
+            <a href="#projects" class="block py-2 px-6 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-slate-800">Projects</a>
+            <a href="#skills" class="block py-2 px-6 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-slate-800">Skills</a>
+            <a href="#certifications" class="block py-2 px-6 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-slate-800">Certifications</a>
+            <a href="#contact" class="block py-2 px-6 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-slate-800">Contact</a>
+        </div>
+    </header>
+    <main>
+      <section id="home" class="min-h-screen flex items-center bg-white dark:bg-slate-900">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
+                    <h1 class="text-5xl md:text-5xl font-bold leading-tight mb-4 text-slate-800 dark:text-white">Hi, I'm <span class="text-blue-600">Chirri Sasidhar</span></h1>
+                    <h2 class="text-2xl md:text-2xl font-bold leading-tight mb-4 text-slate-700 dark:text-slate-300">Software Development Engineer (SDE)</h2>
+                    <p class="text-xl text-slate-600 dark:text-slate-400 mb-8">I’m a passionate developer who loves building creative and efficient software. I focus on clean code and keep improving my skills.</p>
+                    <p class="text-xl text-slate-600 dark:text-slate-400 mb-8">Fresh mind, full stack - building clean, powerful web experiences.</p>
+                    <div class="flex justify-center md:justify-start space-x-6 mb-8">
+                        <a href="https://linkedin.com/in/sasidhar-chirri" target="_blank" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-500 transition text-4xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Sasidhar-Chirri18" target="_blank" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-500 transition text-4xl"><i class="fab fa-github"></i></a>
+                        <a href="mailto:sasidharchirri511@gmail.com" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-500 transition text-4xl"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+917569072902" class="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-500 transition text-4xl"><i class="fas fa-phone-alt"></i></a>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                        <a href="https://drive.google.com/file/d/1ytwRvwWnk0BHHd-XpiiU7Apx1d2kg-SK/view?usp=sharing" target="_blank" class="bg-blue-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-800 transition w-full sm:w-auto text-center">
+                            View My Resume
+                        </a>
+                        <a href="#projects" class="bg-black dark:bg-slate-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-600 transition w-full sm:w-auto text-center">
+                            View My Work
+                        </a>
+                    </div>
+                    </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="MyProfilepic.jpeg" alt="Profile" class="w-60 h-60 md:w-96 md:h-96 rounded-full object-cover shadow-2xl border-8 border-blue-700">
+                </div>
+            </div>
+        </section>
+      <!-- About Me -->
+      <section id="about" class="py-24 bg-gray-50 dark:bg-slate-900 scroll-target">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-slate-800 dark:text-white">About Me</h2>
+                <div class="max-w-3xl mx-auto text-center text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                    <p>
+                        I'm an enthusiastic Full Stack Developer with a strong passion for building clean, responsive, and interactive web applications. I specialize in developing full-fledged solutions using Core Java, Spring Boot, and MySQL on the backend, and HTML, CSS, and JavaScript on the frontend. With hands-on experience in advanced Java (JDBC, JSP/Servlets) and version control using Git & GitHub, I enjoy turning ideas into scalable and efficient software. As a passionate Electronics and Communication Engineering graduate proficient in Java and Object-Oriented Programming, I possess strong skills in software development and database management. I'm eager to contribute to an innovative, growth-oriented organization while continuously enhancing my technical expertise.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-4xl mx-auto">
+                    
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg flex items-start space-x-6 transform transition-transform duration-300 hover:-translate-y-2">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-md">
+                                <i class="fas fa-code text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-slate-800 dark:text-white">Clean Code</h3>
+                            <p class="text-slate-600 dark:text-slate-400">Writing maintainable and efficient code following best practices.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg flex items-start space-x-6 transform transition-transform duration-300 hover:-translate-y-2">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-md">
+                                <i class="fas fa-lightbulb text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-slate-800 dark:text-white">Creative Solutions</h3>
+                            <p class="text-slate-600 dark:text-slate-400">Innovative approaches to solve complex problems.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section> 
+        <!-- Education --> 
+         <section id="education" class="py-20 bg-white dark:bg-slate-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 text-slate-800 dark:text-white">Education</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="border-l-2 border-slate-300 dark:border-slate-700 pl-8 py-4 relative">
+                        <div class="absolute w-4 h-4 bg-blue-800 rounded-full -left-2 top-4"></div>
+                        <h3 class="text-2xl font-semibold text-slate-800 dark:text-white">Bachelor of Technology in Electronics and Communication Engineering</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Sri Venkateswara College of Engineering (SVCE), Tirupati</p>
+                        <p class="text-slate-600 dark:text-slate-400">2020 - 2024</p>
+                        <p class="mt-2 text-slate-700 dark:text-slate-300"><span class="text-blue-600 dark:text-blue-500 font-semibold">CGPA : 9.38</span></p>
+                    </div>
+                    <div class="border-l-2 border-slate-300 dark:border-slate-700 pl-8 py-4 relative mt-8">
+                        <div class="absolute w-4 h-4 bg-blue-800 rounded-full -left-2 top-4"></div>
+                        <h3 class="text-2xl font-semibold text-slate-800 dark:text-white">Board of Intermediate Education</h3>
+                        <p class="text-slate-600 dark:text-slate-400">MGM Junior College, Srikalahasti</p>
+                        <p class="text-slate-600 dark:text-slate-400">2018 - 2020</p>
+                        <p class="mt-2 text-slate-700 dark:text-slate-300"><span class="text-blue-600 dark:text-blue-500 font-semibold">CGPA : 9.7</span></p>
+                    </div>
+                    <div class="border-l-2 border-slate-300 dark:border-slate-700 pl-8 py-4 relative mt-8">
+                        <div class="absolute w-4 h-4 bg-blue-800 rounded-full -left-2 top-4"></div>
+                        <h3 class="text-2xl font-semibold text-slate-800 dark:text-white">Board of Secondary Education</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Bapuji Vidya Sadan, Papanaidupet</p>
+                        <p class="text-slate-600 dark:text-slate-400">Until 2018</p>
+                        <p class="mt-2 text-slate-700 dark:text-slate-300"><span class="text-blue-600 dark:text-blue-500 font-semibold">CGPA : 9.3</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>  
+        <!--Project section-->
+        <section id="projects" class="py-24 bg-gray-50 dark:bg-slate-900 scroll-target">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-center mb-4 text-slate-800 dark:text-white">My Projects</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mt-4 max-w-2xl mx-auto">
+                        Here are some of my recent projects that showcase my skills and experience.
+                    </p>
+                </div>
+        
+                 <!--Entire project Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Project Card 1: Food Application -->
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="flex-grow space-y-3">
+                            <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-500">Food Application (Food Clone)</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-justify">A full-stack online food ordering platform using Java, JSP/Servlets, JDBC and MySQL, featuring user authentication, menu management, and real-time tracking.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JSP/Servlets</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JDBC</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">MySQL</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML5</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS3</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 pt-4 mt-auto">
+                            <a href="https://github.com/Sasidhar-Chirri18/FoodApplication.git" target="_blank" class="flex-1 text-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="https://github.com/Sasidhar-Chirri18/FoodApplication.git" target="_blank" class="flex-1 text-center bg-gray-700 dark:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-slate-700 transition-all duration-300">
+                                <i class="fab fa-github mr-2"></i>Source Code
+                            </a>
+                        </div>
+                    </div>
+  
+                <!-- Project Card 2: SellEase -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="flex-grow space-y-3">
+                            <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-500">SellEase (Ecom)</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-justify">A scalable e-commerce platform using Java and SpringBoot, with product listings, order tracking, and authentication with MySQL-based inventory management.</p>
+                            <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">SpringBoot</span>
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">MySQL</span>
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JDBC</span>
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JSP/Servlets</span>
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML5</span>
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS3</span>
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 pt-4 mt-auto">
+                            <a href="#" target="_blank" class="flex-1 text-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" target="_blank" class="flex-1 text-center bg-gray-700 dark:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-slate-700 transition-all duration-300">
+                                <i class="fab fa-github mr-2"></i>Source Code
+                            </a>
+                        </div>
+                    </div>
+        
+                    <!-- Project Card 3: Personal Portfolio -->
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="flex-grow space-y-3">
+                           <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-500">Personal Portfolio</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-justify">A responsive portfolio website using HTML5, Tailwind CSS, and JavaScript, featuring smooth animations and a dark mode toggle.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML5</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS3</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 pt-4 mt-auto">
+                            <a href="#" target="_blank" class="flex-1 text-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" target="_blank" class="flex-1 text-center bg-gray-700 dark:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-slate-700 transition-all duration-300">
+                                <i class="fab fa-github mr-2"></i>Source Code
+                            </a>
+                        </div>
+                    </div>
+        
+                    <!-- Project Card 4: Puma Landing Page -->
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="flex-grow space-y-3">
+                            <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-500">Puma Landing Page</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-justify">A responsive and modern landing page built with React and Tailwind CSS. It features smooth animations and works well on all devices.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML5</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS3</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 pt-4 mt-auto">
+                            <a href="https://puma-landing-page-azure.vercel.app/" target="_blank" class="flex-1 text-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="https://github.com/Sasidhar-Chirri18/Puma_LandingPage.git" target="_blank" class="flex-1 text-center bg-gray-700 dark:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-slate-700 transition-all duration-300">
+                                <i class="fab fa-github mr-2"></i>Source Code
+                            </a>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>          
+  <!-- Skills -->
+  <section id="skills" class="py-20 bg-white dark:bg-slate-900">
+     <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-slate-800 dark:text-white">Skills</h2>
+      <div class="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto text-lg">  
+
+      <span class="skill-tag"><i class="fa-brands fa-java text-orange-600"></i> Core Java</span>
+      <span class="skill-tag"><i class="fa-solid fa-code text-blue-600"></i>Enterprise Java Development(J2EE)</span>
+      <span class="skill-tag"><i class="fa-solid fa-file-code text-yellow-600"></i> JavaServer Pages(JSP)</span>
+      <span class="skill-tag"><i class="fa-solid fa-database text-emerald-600"></i> Java Database Connectivity(JDBC)</span>
+      <span class="skill-tag"><i class="fa-solid fa-leaf text-green-600"></i> Spring Boot</span>
+      <span class="skill-tag"><i class="fa-solid fa-database text-blue-700"></i> MySQL</span>
+      <span class="skill-tag"><i class="fa-brands fa-html5 text-orange-500"></i> HTML5</span>
+      <span class="skill-tag"><i class="fa-brands fa-css3-alt text-blue-500"></i> CSS3</span>
+      <span class="skill-tag"><i class="fa-brands fa-js text-yellow-500"></i> JavaScript</span>
+      <span class="skill-tag"><i class="fa-brands fa-react text-sky-500"></i> React</span>
+      <span class="skill-tag"><i class="fa-solid fa-wind text-cyan-500"></i> Tailwind CSS</span>
+      <span class="skill-tag"><i class="fa-brands fa-git-alt text-red-600"></i> Git</span>
+      <span class="skill-tag"><i class="fa-brands fa-github text-gray-800"></i> GitHub</span>
+      <span class="skill-tag"><i class="fa-solid fa-server text-orange-500"></i> Apache Tomcat</span>
+      <span class="skill-tag"><i class="fa-solid fa-leaf text-green-700"></i> Hibernate</span>
+      <span class="skill-tag"><i class="fa-solid fa-code-branch text-indigo-500"></i> Eclipse IDE</span>
+      <span class="skill-tag"><i class="fa-solid fa-code text-blue-700"></i> Visual Studio Code</span>
+      <span class="skill-tag"><i class="fa-solid fa-cloud-arrow-up text-black"></i> Vercel</span>
+    </div>
+  </div>
+</section>
+    <!--Certifications-->
+    <section id="certifications" class="py-20 bg-gray-50 dark:bg-slate-900">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center mb-4 text-slate-800 dark:text-white">Certifications</h2>
+            <p class="text-center text-gray-600 dark:text-gray-400 mb-12">
+              Professional certifications and continuous learning achievements
+            </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-gradient-to-b from-blue-400 to-blue-600 text-white p-3 rounded-xl"><i class="fa-solid fa-award text-2xl"></i></div>
+                            <div>
+                          <h3 class="text-lg font-semibold text-slate-800 dark:text-white">HackerRank Certified - Java</h3>
+                            <p class="text-slate-600 dark:text-slate-400">HackerRank</p>
+            <p class="text-slate-500 text-sm">2024</p>
+            <a href="https://drive.google.com/file/d/1OWNMk5_XPnMmWEPsjtMx6s-PYK41qac7/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-3 text-blue-600 font-medium border border-blue-600 px-3 py-1.5 rounded-lg hover:bg-blue-600 hover:text-white transition">
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i> View Credential
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-gradient-to-b from-blue-400 to-blue-600 text-white p-3 rounded-xl"><i class="fa-solid fa-award text-2xl"></i></div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-slate-800 dark:text-white">HackerRank Certified - SQL</h3>
+                                <p class="text-slate-600 dark:text-slate-400">HackerRank</p>
+            <p class="text-slate-500 text-sm">2024</p>
+            <a href="https://drive.google.com/file/d/14Cbqlx6nyeTuHYZ0lx-uHCA25v_LTvtv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-3 text-blue-600 font-medium border border-blue-600 px-3 py-1.5 rounded-lg hover:bg-blue-600 hover:text-white transition">
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i> View Credential
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-gradient-to-b from-blue-400 to-blue-600 text-white p-3 rounded-xl"><i class="fa-solid fa-award text-2xl"></i></div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-slate-800 dark:text-white">Infosys Springboard - Java</h3>
+                                <p class="text-slate-600 dark:text-slate-400">Infosys</p>
+            <p class="text-slate-500 text-sm">2024</p>
+            <a href="https://drive.google.com/file/d/1JnET-1E3KfouzRyY9PbR_U7P9Y6ss7le/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-3 text-blue-600 font-medium border border-blue-600 px-3 py-1.5 rounded-lg hover:bg-blue-600 hover:text-white transition">
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i> View Credential
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-gradient-to-b from-blue-400 to-blue-600 text-white p-3 rounded-xl"><i class="fa-solid fa-award text-2xl"></i></div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-slate-800 dark:text-white">Java Full Stack Web Development</h3>
+                                <p class="text-slate-600 dark:text-slate-400">Tap Academy</p>
+            <p class="text-slate-500 text-sm">2024</p>
+            <a href="https://drive.google.com/file/d/1VKfZIygexG_ssHAaoXMNhzugZ1dh2xN8/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-3 text-blue-600 font-medium border border-blue-600 px-3 py-1.5 rounded-lg hover:bg-blue-600 hover:text-white transition">
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i> View Credential
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-lg transition">
+        <div class="flex items-start gap-4">
+          <div class="bg-gradient-to-b from-blue-400 to-blue-600 text-white p-3 rounded-xl">
+            <i class="fa-solid fa-award text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-slate-800 dark:text-white">Internet of Things(IOT)</h3>
+            <p class="text-slate-600 dark:text-slate-400">NPTEL</p>
+            <p class="text-slate-500 text-sm">2023</p>
+            <a href="https://drive.google.com/file/d/1Jg3-yK12tEd7NkbiSZ8esn3q4P0tj38O/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-3 text-blue-600 font-medium border border-blue-600 px-3 py-1.5 rounded-lg hover:bg-blue-600 hover:text-white transition">
+              <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i> View Credential
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section-->
+ <section id="contact" class="py-20 bg-slate-800 text-white">   
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Side -->
+      <div class="text-left">
+        <h2 class="text-4xl font-bold mb-4">Let's Connect!</h2>
+        <p class="text-slate-300 max-w-md mb-8">
+          I'm currently looking for new opportunities. Feel free to reach out via email or connect with me on social media.
+        </p>
+        <div class="flex space-x-6">
+          <a href="https://github.com/Sasidhar-Chirri18" target="_blank" class="text-white hover:text-slate-300 transition text-3xl">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/sasidhar-chirri" target="_blank" class="text-white hover:text-slate-300 transition text-3xl">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:sasidharchirri511@gmail.com" class="text-white hover:text-slate-300 transition text-3xl">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+917569072902" class="text-white hover:text-slate-300 transition text-3xl">
+            <i class="fas fa-phone-alt"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="bg-white dark:bg-slate-700 text-slate-800 dark:text-white rounded-2xl shadow-lg p-8">
+        <form action="#" method="POST" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-slate-700 dark:text-slate-200 font-semibold mb-2">Name</label>
+              <input type="text" placeholder="Your Name" class="w-full px-4 py-2 bg-gray-100 dark:bg-slate-600 border border-slate-300 dark:border-slate-500 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
+            </div>
+            <div>
+              <label class="block text-slate-700 font-semibold dark:text-slate-200 mb-2">Email</label>
+              <input type="email" placeholder="your.email@example.com" class="w-full px-4 py-2 bg-gray-100 dark:bg-slate-600 border border-slate-300 dark:border-slate-500 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-slate-700 font-semibold dark:text-slate-200 mb-2">Subject</label>
+            <input type="text" placeholder="Project Inquiry" class="w-full px-4 py-2 bg-gray-100 dark:bg-slate-600 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+          </div>
+
+          <div>
+            <label class="block text-slate-700 dark:text-slate-200 font-semibold mb-2">Message</label>
+            <textarea rows="4" placeholder="Tell me about your project..." class="w-full px-4 py-2 bg-gray-100 dark:bg-slate-600 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 transition">
+            <i class="fa-solid fa-paper-plane"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6">
+      <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-slate-600 dark:text-slate-400 text-sm">
+    <div class="text-center md:text-left mb-4 md:mb-0">
+      <p>&copy; 2025 Chirri Sasidhar. All rights reserved.</p>
+    </div>
+    <div class="flex space-x-6 text-lg">
+      <a href="https://github.com/Sasidhar-Chirri18" target="_blank" class="hover:text-slate-800 transition">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/sasidhar-chirri" target="_blank" class="hover:text-slate-800 transition">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:sasidharchirri511@gmail.com" class="hover:text-slate-800 transition">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="tel:+917569072902" class="hover:text-slate-800 transition">
+            <i class="fas fa-phone-alt"></i>
+          </a>
+    </div>
+  </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
